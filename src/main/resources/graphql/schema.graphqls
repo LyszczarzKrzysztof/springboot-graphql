@@ -1,0 +1,14 @@
+type Movie {
+    id: ID!,
+    author: String,
+    url: String
+}
+
+type Query {
+    getMovies(limit: Int): [Movie]
+    getMovieById(id: ID): Movie
+}
+
+type Mutation {
+    createMovie(name: String, url: String): Movie
+}
